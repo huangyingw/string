@@ -27,15 +27,17 @@ String::String(const char* str)
 char* String::StringCat(const char* str)
 {
 	char* target = (char*) realloc (NULL,(GetLength(data)+GetLength(str)) * sizeof(char));
-	while(*data)
+	char * source=data;
+	char * p=target;
+	while(*source)
 	{
-		*target++=*data++;
+		*p++=*source++;
 	}
 	while(*str)
 	{
-		*target++=*str++;
+		*p++=*str++;
 	}
-	*target='\0';
+	*++p='\0';
 	data=target;
 }
 
