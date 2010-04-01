@@ -25,14 +25,15 @@ String::String(const char* str)
 
 void String::StringCat(char* str)
 {
-	data = (char*) realloc (data,(GetLength(data)+GetLength(str)) * sizeof(char));
-	//char* original=target;
-	//while(*target)//此处为相应指针位置的内容
-	//{
-	//	target++;//Find the end of the string
-	//}
-	//while(*target++=*source++);
-
+	char* target = (char*) realloc (NULL,(GetLength(data)+GetLength(str)) * sizeof(char));
+	while(*data)
+	{
+		*target++=*data++;
+	}
+	while(*str)
+	{
+		*target++=*str++;
+	}
 }
 
 void String::ShowString()

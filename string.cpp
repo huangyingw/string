@@ -2,7 +2,7 @@
 
 int main(void)
 {
-	String string("Hello word!");
+	String string("Hello Word!");
 	string.ShowString();
 	return 0;
 }
