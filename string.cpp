@@ -2,8 +2,7 @@
 
 int main(void)
 {
-	char p[] ="123";
-	String string(p);
+	String string("Hello word!");
 	string.ShowString();
 	return 0;
 }

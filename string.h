@@ -4,8 +4,8 @@ using namespace std;
 class String
 {
 public:
-	String(char* str);
-	int GetLength(char* str);
+	String(const char* str);
+	int GetLength(const char* str);
 	void ShowString();
 	void StringCat(char* str);//Cat the current string with given string,it's still remain unrealizing.
 	//for I don't know how to reallocate a pointer in c++
@@ -13,7 +13,7 @@ private:
 	char *data;
 };
 
-String::String(char* str)
+String::String(const char* str)
 {
 	data=new char[GetLength(str)];
 	char *temp=data;
@@ -38,7 +38,7 @@ void String::ShowString()
 	
 	cout<<data<<endl;
 }
-int String::GetLength(char* str)
+int String::GetLength(const char* str)
 {
 	int len=0;
 	while(*str++!='\0')
