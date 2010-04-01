@@ -9,6 +9,7 @@ class String
 public:
 	String(const char* str);
 	int GetLength(const char* str);
+	char* StringCat(const char* str);
 	void ShowString();
 	void StringCat(char* str);//Cat the current string with given string,it's still remain unrealizing.
 	//for I don't know how to reallocate a pointer in c++
@@ -23,7 +24,7 @@ String::String(const char* str)
 	while(*temp++=*str++);
 }
 
-void String::StringCat(char* str)
+char* String::StringCat(const char* str)
 {
 	char* target = (char*) realloc (NULL,(GetLength(data)+GetLength(str)) * sizeof(char));
 	while(*data)
