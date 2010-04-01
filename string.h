@@ -35,6 +35,7 @@ void String::StringCat(char* str)
 
 void String::ShowString()
 {
+	
 	cout<<data<<endl;
 }
 int String::GetLength(char* str)

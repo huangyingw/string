@@ -2,10 +2,9 @@
 
 int main(void)
 {
-	/*
-	String string("123");
+	char p[] ="123";
+	String string(p);
 	string.ShowString();
-	*/
 	return 0;
 }
 
