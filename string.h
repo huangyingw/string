@@ -35,6 +35,8 @@ char* String::StringCat(const char* str)
 	{
 		*target++=*str++;
 	}
+	*target='\0';
+	data=target;
 }
 
 void String::ShowString()
