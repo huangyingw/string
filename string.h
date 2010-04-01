@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -42,7 +43,9 @@ void String::WordRev()
 		p++;
 	while(*p!=' ')
 		p--;
-	//cout<<++p<<endl;
+	strcat(newStr, ++p);
+	cout<<newStr<<endl;
+	
 }
 
 char* String::StringCat(const char* str)
