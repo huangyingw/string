@@ -24,12 +24,9 @@ String::String(const char* str)
 	while(*temp++=*str++);
 }
 
-void WordRev()
+void String::WordRev()
 {
-	char* newStr=new 
-	string *stringArray = new std::string;
-
-	
+	char* newStr=new char [GetLength(data)];
 }
 
 char* String::StringCat(const char* str)
