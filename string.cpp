@@ -6,5 +6,6 @@ int main(void)
 	string.ShowString();
 	string.StringCat(", I love you!");
 	string.ShowString();
+	string.WordRev();
 	return 0;
 }

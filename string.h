@@ -37,6 +37,12 @@ String::~String()
 void String::WordRev()
 {
 	newStr=new char [GetLength(data)];
+	char* p=data;
+	while(*p!='\0')
+		p++;
+	while(*p!=' ')
+		p--;
+	//cout<<++p<<endl;
 }
 
 char* String::StringCat(const char* str)
