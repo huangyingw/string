@@ -27,7 +27,7 @@ String::String(const char* str)
 
 String::~String()
 {
-	
+	delete[] data;
 }
 
 void String::WordRev()
