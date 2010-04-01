@@ -38,19 +38,30 @@ String::~String()
 void String::WordRev()
 {
 	char *left, *right;
+	char space[]=" ";
 	newStr=new char [GetLength(data)];
-	char* p=data;
-	while(*p!='\0')
-		p++;
-	while(*p!=' ')
-		p--;
-	strcat(newStr, ++p);
+	right=data;
+	while(*right!='\0')
+		right++;
+	left=right;
+	while(*left!=' ')
+		left--;
+	strcat(newStr, ++left);
+	strcat(newStr, space);
 	cout<<newStr<<endl;
-	while(*p==' ')
-		p--;
-	right=p;
 	
-	
+	right=--left;
+	while(*right==' ')
+		--right;
+	cout<<*right<<endl;
+	left=right;
+	*(++right)='\0';
+		
+	while(*left!=' ')
+		left--;
+	strcat(newStr, ++left);
+	strcat(newStr, space);
+	cout<<newStr<<endl;
 }
 
 char* String::StringCat(const char* str)
