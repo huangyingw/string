@@ -1,4 +1,7 @@
 #include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
 using namespace std;
 
 class String
@@ -20,10 +23,9 @@ String::String(const char* str)
 	while(*temp++=*str++);
 }
 
-/*
 void String::StringCat(char* str)
 {
-	numbers = (int*) realloc (numbers, count * sizeof(int));
+	data = (char*) realloc (data,GetLength(data) * sizeof(char));
 	//char* original=target;
 	//while(*target)//此处为相应指针位置的内容
 	//{
@@ -32,7 +34,6 @@ void String::StringCat(char* str)
 	//while(*target++=*source++);
 
 }
-*/
 
 void String::ShowString()
 {
