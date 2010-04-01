@@ -27,6 +27,8 @@ String::String(const char* str)
 void WordRev()
 {
 	char* newStr=new 
+	string *stringArray = new std::string;
+
 	
 }
 
