@@ -1,10 +1,11 @@
 #include <iostream>
 using namespace std;
+
 class String
 {
 public:
 	String(char* str);
-	int String::GetLength(char* str);//获取字符串的长度
+	int GetLength(char* str);
 	void ShowString();
 	void StringCat(char* str);//Cat the current string with given string,it's still remain unrealizing.
 	//for I don't know how to reallocate a pointer in c++
@@ -19,6 +20,7 @@ String::String(char* str)
 	while(*temp++=*str++);
 }
 
+/*
 void String::StringCat(char* str)
 {
 	//char* original=target;
@@ -29,6 +31,7 @@ void String::StringCat(char* str)
 	//while(*target++=*source++);
 
 }
+*/
 
 void String::ShowString()
 {

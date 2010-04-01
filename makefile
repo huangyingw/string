@@ -1,6 +1,6 @@
-run : list.o
-	g++ -o run list.o
-list.o : list.cpp list.h
-	g++ -c list.cpp
+run : string.o
+	g++ -o run string.o
+string.o : string.cpp string.h
+	g++ -c string.cpp
 clean :
-	rm run list.o
+	rm run string.o
