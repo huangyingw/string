@@ -24,6 +24,7 @@ String::String(const char* str)
 	data=new char[GetLength(str)];
 	char *temp=data;
 	while(*temp++=*str++);
+	newStr=NULL;
 }
 
 String::~String()
