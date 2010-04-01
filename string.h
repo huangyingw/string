@@ -11,8 +11,8 @@ public:
 	int GetLength(const char* str);
 	char* StringCat(const char* str);
 	void ShowString();
-	void StringCat(char* str);//Cat the current string with given string,it's still remain unrealizing.
-	//for I don't know how to reallocate a pointer in c++
+	void StringCat(char* str);
+	void WordRev(char* str);
 private:
 	char *data;
 };
