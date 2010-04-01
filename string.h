@@ -16,6 +16,7 @@ public:
 	void WordRev();
 private:
 	char *data;
+	char* newStr;
 };
 
 String::String(const char* str)
@@ -28,11 +29,13 @@ String::String(const char* str)
 String::~String()
 {
 	delete[] data;
+	if(NULL!=newStr)
+		delete[] newStr;
 }
 
 void String::WordRev()
 {
-	char* newStr=new char [GetLength(data)];
+	newStr=new char [GetLength(data)];
 }
 
 char* String::StringCat(const char* str)
