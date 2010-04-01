@@ -25,7 +25,7 @@ String::String(const char* str)
 
 void String::StringCat(char* str)
 {
-	data = (char*) realloc (data,GetLength(data) * sizeof(char));
+	data = (char*) realloc (data,(GetLength(data)+GetLength(str)) * sizeof(char));
 	//char* original=target;
 	//while(*target)//此处为相应指针位置的内容
 	//{
