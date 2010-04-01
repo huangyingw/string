@@ -8,6 +8,7 @@ class String
 {
 public:
 	String(const char* str);
+	~String();
 	int GetLength(const char* str);
 	char* StringCat(const char* str);
 	void ShowString();
@@ -22,6 +23,11 @@ String::String(const char* str)
 	data=new char[GetLength(str)];
 	char *temp=data;
 	while(*temp++=*str++);
+}
+
+String::~String()
+{
+	
 }
 
 void String::WordRev()
