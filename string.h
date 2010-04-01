@@ -12,7 +12,7 @@ public:
 	char* StringCat(const char* str);
 	void ShowString();
 	void StringCat(char* str);
-	void WordRev(char* str);
+	void WordRev();
 private:
 	char *data;
 };
@@ -22,6 +22,12 @@ String::String(const char* str)
 	data=new char[GetLength(str)];
 	char *temp=data;
 	while(*temp++=*str++);
+}
+
+void WordRev()
+{
+	char* newStr=new 
+	
 }
 
 char* String::StringCat(const char* str)
