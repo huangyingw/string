@@ -37,6 +37,7 @@ String::~String()
 
 void String::WordRev()
 {
+	char *left, *right;
 	newStr=new char [GetLength(data)];
 	char* p=data;
 	while(*p!='\0')
@@ -45,6 +46,10 @@ void String::WordRev()
 		p--;
 	strcat(newStr, ++p);
 	cout<<newStr<<endl;
+	while(*p==' ')
+		p--;
+	right=p;
+	
 	
 }
 
