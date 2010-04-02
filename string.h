@@ -50,10 +50,13 @@ void String::WordRev()
 		nav--;
 	strcat(newStr, ++nav);
 	strcat(newStr, space);
-	cout<<newStr<<endl;
+	cout<<"newStr0 string->"<<newStr<<endl;
+	
+	nav--;
 	
 	while(nav!=data)
 	{
+		cout<<"nav0->"<<*nav<<endl;
 		while(*nav==' ')
 			--nav;
 		nav--;
@@ -61,15 +64,18 @@ void String::WordRev()
 		
 		*nav='\0';
 		
-		while(*nav!=' ')
-			--nav;
 		nav++;
 		cout<<"nav2->"<<*nav<<endl;
+		
+		cout<<"newStr1 string->"<<newStr<<endl;
+		cout<<"nav string->"<<nav<<endl;
 		
 		strcat(newStr, nav);
 		strcat(newStr, space);
 		cout<<"result->"<<newStr<<endl;
 		cout<<endl;
+		if(*nav!=' ')
+			nav--;
 	}	
 }
 
