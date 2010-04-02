@@ -39,7 +39,7 @@ String::~String()
 
 void String::WordRev()
 {
-	char *nav;
+	char *nav, *p;
 	char space[]=" ";
 	newStr=new char [GetLength(data)];
 	nav=data;
@@ -57,23 +57,26 @@ void String::WordRev()
 		cout<<"nav0->"<<*nav<<endl;
 		while(*nav==' ')
 			--nav;
-		nav--;
+		//nav--;
 		cout<<"nav1->"<<*nav<<endl;
 		
-		*nav='\0';
+		p=nav;
+		*++p='\0';
 		
-		nav++;
+		while(*nav!=' ')
+			--nav;
+		
 		cout<<"nav2->"<<*nav<<endl;
 		
-		cout<<"newStr1 string->"<<newStr<<endl;
 		cout<<"nav string->"<<nav<<endl;
+		cout<<"newStr1 string->"<<newStr<<endl;
+		
 		
 		strcat(newStr, nav);
 		strcat(newStr, space);
 		cout<<"result->"<<newStr<<endl;
 		cout<<endl;
-		if(*nav!=' ')
-			nav--;
+		
 	}	
 }
 
