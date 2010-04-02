@@ -47,12 +47,10 @@ void String::WordRev()
 		nav++;
 	nav=nav;
 	while(*nav!=' ')
-		nav--;
-	strcat(newStr, ++nav);
+		--nav;
+	strcat(newStr, nav);
 	strcat(newStr, space);
-	cout<<"newStr0 string->"<<newStr<<endl;
-	
-	nav--;
+	cout<<"newStr0 string->"<<newStr<<endl<<endl;
 	
 	while(nav!=data)
 	{
