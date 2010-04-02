@@ -55,12 +55,11 @@ void String::WordRev()
 	while(nav!=data)
 	{
 		while(*nav==' ')
-			nav--;
-			
+			--nav;
+		nav--;
 		cout<<"nav->"<<*nav<<endl;
 		
-		nav=nav;
-		*(++nav)='\0';
+		*nav='\0';
 		
 		while(*nav!=' ')
 			nav--;
