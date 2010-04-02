@@ -39,34 +39,32 @@ String::~String()
 
 void String::WordRev()
 {
-	char *left, *nav;
+	char *nav;
 	char space[]=" ";
 	newStr=new char [GetLength(data)];
 	nav=data;
 	while(*nav!='\0')
 		nav++;
-	left=nav;
-	while(*left!=' ')
-		left--;
-	strcat(newStr, ++left);
+	nav=nav;
+	while(*nav!=' ')
+		nav--;
+	strcat(newStr, ++nav);
 	strcat(newStr, space);
 	cout<<newStr<<endl;
 	
-	while(left!=data)
+	while(nav!=data)
 	{
-		nav=--left;
 		while(*nav==' ')
-			--nav;
+			nav--;
 			
-		cout<<"left->"<<*left<<endl;
 		cout<<"nav->"<<*nav<<endl;
 		
-		left=nav;
+		nav=nav;
 		*(++nav)='\0';
 		
-		while(*left!=' ')
-			left--;
-		strcat(newStr, ++left);
+		while(*nav!=' ')
+			nav--;
+		strcat(newStr, ++nav);
 		strcat(newStr, space);
 		cout<<newStr<<endl;
 	}	
