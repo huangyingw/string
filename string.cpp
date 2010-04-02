@@ -2,9 +2,9 @@
 
 int main(void)
 {
-	String string("I am a coder");
+	String string("A BC DEF");
 	string.ShowString();
-	string.StringCat(", I love you!");
+	string.StringCat(" GEHI");
 	string.ShowString();
 	string.WordRev();
 	return 0;
