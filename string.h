@@ -39,13 +39,13 @@ String::~String()
 
 void String::WordRev()
 {
-	char *left, *right;
+	char *left, *nav;
 	char space[]=" ";
 	newStr=new char [GetLength(data)];
-	right=data;
-	while(*right!='\0')
-		right++;
-	left=right;
+	nav=data;
+	while(*nav!='\0')
+		nav++;
+	left=nav;
 	while(*left!=' ')
 		left--;
 	strcat(newStr, ++left);
@@ -54,15 +54,15 @@ void String::WordRev()
 	
 	while(left!=data)
 	{
-		right=--left;
-		while(*right==' ')
-			--right;
+		nav=--left;
+		while(*nav==' ')
+			--nav;
 			
 		cout<<"left->"<<*left<<endl;
-		cout<<"right->"<<*right<<endl;
+		cout<<"nav->"<<*nav<<endl;
 		
-		left=right;
-		*(++right)='\0';
+		left=nav;
+		*(++nav)='\0';
 		
 		while(*left!=' ')
 			left--;
