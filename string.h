@@ -32,7 +32,9 @@ String::~String()
 {
 	delete[] data;
 	if(NULL!=newStr)
+	{
 		delete[] newStr;
+	}
 }
 
 void String::WordRev()
