@@ -35,7 +35,11 @@ String::String(const char* str)
 
 String::~String()
 {
-	delete[] data;
+	if(NULL!=data)
+	{
+		delete[] data;
+	}
+	
 	if(NULL!=newStr)
 	{
 		delete[] newStr;
@@ -108,9 +112,8 @@ void String::WordRev()
 			nav--;
 		strcat(newStr, nav);
 		strcat(newStr, space);
-		fout<<"result->"<<newStr<<endl;
-		fout<<endl;
 	}	
+	data=newStr;
 }
 
 char* String::StringCat(const char* str)

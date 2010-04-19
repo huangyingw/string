@@ -7,5 +7,6 @@ int main(void)
 	string.StringCat(" GHIJ");
 	string.ShowString();
 	string.WordRev();
+	string.ShowString();
 	return 0;
 }
