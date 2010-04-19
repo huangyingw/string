@@ -29,6 +29,7 @@ String::String(const char* str)
 	char *temp=data;
 	while(*temp++=*str++);
 	newStr=NULL;
+	fout.open("output.txt");
 }
 
 String::~String()
@@ -38,6 +39,7 @@ String::~String()
 	{
 		delete[] newStr;
 	}
+	fout.close();
 }
 
 void String::WordRev()
