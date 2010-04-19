@@ -17,6 +17,7 @@ public:
 	void ShowString();
 	void StringCat(char* str);
 	void WordRev();
+	void WordRevWithSubStr();
 	void StringRev();
 private:
 	ofstream fout;
@@ -88,6 +89,11 @@ void String::StringRev()
 		
 	}	
 	*/
+}
+
+void String::WordRevWithSubStr()
+{
+	
 }
 
 void String::WordRev()
