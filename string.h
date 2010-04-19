@@ -45,7 +45,6 @@ void String::WordRev()
 	nav=data;
 	while(*nav!='\0')
 		nav++;
-	nav=nav;
 	while(*nav!=' ')
 		--nav;
 	strcat(newStr, nav);
