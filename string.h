@@ -102,9 +102,9 @@ char* String::StringCat(const char* str)
 
 void String::ShowString()
 {
-	
 	fout<<data<<endl;
 }
+
 int String::GetLength(const char* str)
 {
 	int len=0;
