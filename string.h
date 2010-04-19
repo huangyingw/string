@@ -59,8 +59,7 @@ void String::WordRev()
 
 		cout<<"nav1->"<<*nav<<endl;
 		
-		p=nav;
-		*++p='\0';
+		*++nav='\0';
 		
 		while(*nav!=' ' && nav>data)
 			nav--;
