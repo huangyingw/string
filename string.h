@@ -113,7 +113,7 @@ void String::WordRev()
 		strcat(newStr, nav);
 		strcat(newStr, space);
 	}	
-	data=newStr;
+	fout<<newStr<<endl;
 }
 
 char* String::StringCat(const char* str)
