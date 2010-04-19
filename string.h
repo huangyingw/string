@@ -17,6 +17,7 @@ public:
 	void ShowString();
 	void StringCat(char* str);
 	void WordRev();
+	void WordRevWithStack();
 	void WordRevWithSubStr();
 	void StringRev();
 private:
