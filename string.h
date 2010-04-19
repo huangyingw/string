@@ -103,9 +103,7 @@ void String::WordRev()
 	{
 		while(*nav==' ')
 			--nav;
-
 		*++nav='\0';
-		
 		while(*nav!=' ' && nav>data)
 			nav--;
 		strcat(newStr, nav);
