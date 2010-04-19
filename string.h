@@ -17,6 +17,7 @@ public:
 	void ShowString();
 	void StringCat(char* str);
 	void WordRev();
+	void StringRev();
 private:
 	ofstream fout;
 	char *data;
@@ -40,6 +41,47 @@ String::~String()
 		delete[] newStr;
 	}
 	fout.close();
+}
+
+void String::StringRev()
+{
+	char *nav, *p;
+	char space[]=" ";
+	newStr=new char [GetLength(data)];
+	nav=data;
+	while(*nav!='\0')
+		nav++;
+	while(*nav!=' ')
+		--nav;
+	strcat(newStr, nav);
+	strcat(newStr, space);
+	fout<<"newStr0 string->"<<newStr<<endl<<endl;
+	
+	while(nav>data)
+	{
+		fout<<"nav0->"<<*nav<<endl;
+		while(*nav==' ')
+			--nav;
+
+		fout<<"nav1->"<<*nav<<endl;
+		
+		*++nav='\0';
+		
+		while(*nav!=' ' && nav>data)
+			nav--;
+		
+		fout<<"nav2->"<<*nav<<endl;
+		
+		fout<<"nav string->"<<nav<<endl;
+		fout<<"newStr1 string->"<<newStr<<endl;
+		
+		
+		strcat(newStr, nav);
+		strcat(newStr, space);
+		fout<<"result->"<<newStr<<endl;
+		fout<<endl;
+		
+	}	
 }
 
 void String::WordRev()
