@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <fstream>
+using namespace std;
 
 using namespace std;
 
@@ -16,6 +18,7 @@ public:
 	void StringCat(char* str);
 	void WordRev();
 private:
+	ofstream fout;
 	char *data;
 	char* newStr;
 };
