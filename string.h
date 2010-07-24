@@ -15,6 +15,8 @@ public:
 	void ShowString();
 	void StringCat(char* str);
 	void WordRev();
+	void WordRevWithStack();
+	void WordRevWithSubStr();
 	void StringRev();
 private:
 	ofstream fout;
@@ -88,30 +90,40 @@ void String::StringRev()
 	*/
 }
 
+void String::WordRevWithSubStr()
+{
+	
+}
+
 void String::WordRev()
 {
-	char *nav, *p;
-	char space[]=" ";
-	newStr=new char [GetLength(data)];
-	nav=data;
-	while(*nav!='\0')
-		nav++;
-	while(*nav!=' ')
-		--nav;
-	strcat(newStr, nav);
-	strcat(newStr, space);
-	
-	while(nav>data)
-	{
-		while(*nav==' ')
-			--nav;
-		*++nav='\0';
-		while(*nav!=' ' && nav>data)
-			nav--;
-		strcat(newStr, nav);
-		strcat(newStr, space);
-	}	
-	data=newStr;
+	int len = strlen(data);
+  char* restr = new char[len+1];
+  strcpy(restr,data);
+  int i,j;
+  for(i=0,j=len-1;i<j;i++,j--)
+  {
+  	
+    char temp=restr[i];
+    restr[i]=restr[j];
+    restr[j]=temp;
+  }
+  int k=0;
+  while(k<len)
+  {
+    i=j=k;
+    while(restr[j]!=' ' && restr[j]!='\0' )
+			j++;
+    k=j+1;
+    j--;
+    for(;i<j;i++,j--)
+    {
+      char temp=restr[i];
+      restr[i]=restr[j];
+      restr[j]=temp;
+    }
+  }
+  fout<<restr<<endl;
 }
 
 char* String::StringCat(const char* str)
