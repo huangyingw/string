@@ -11,11 +11,14 @@ public:
 	String(const char* str);
 	~String();
 	int GetLength(const char* str);
+	
+	/*
 	char* StringCat(const char* str);
 	void ShowString();
 	void StringCat(char* str);
 	void WordRev();
 	void StringRev();
+	*/
 private:
 	ofstream fout;
 	char *data;
@@ -24,11 +27,14 @@ private:
 
 String::String(const char* str)
 {
+	/*
 	data=new char[GetLength(str)];
 	char *temp=data;
 	while(*temp++=*str++);
 	newStr=NULL;
 	fout.open("output.txt");
+	*/
+	
 }
 
 String::~String()
@@ -38,13 +44,16 @@ String::~String()
 		delete[] data;
 	}
 	
+	/*
 	if(NULL!=newStr)
 	{
 		delete[] newStr;
 	}
 	fout.close();
+	*/
 }
 
+/*
 void String::StringRev()
 {
 	/*
@@ -85,7 +94,6 @@ void String::StringRev()
 		fout<<endl;
 		
 	}	
-	*/
 }
 
 void String::WordRev()
@@ -145,3 +153,4 @@ int String::GetLength(const char* str)
 	}
 	return len;
 }
+*/
