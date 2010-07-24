@@ -5,8 +5,6 @@
 #include <fstream>
 using namespace std;
 
-using namespace std;
-
 class String
 {
 public:
