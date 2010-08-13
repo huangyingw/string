@@ -96,10 +96,9 @@ void String::WordRev()
   int i,j;
   for(i=0,j=len-1;i<j;i++,j--)
   {
-  	
-    char temp=restr[i];
-    restr[i]=restr[j];
-    restr[j]=temp;
+    restr[i]^=restr[j];
+    restr[j]^=restr[i];
+    restr[i]^=restr[j];
   }
   int k=0;
   while(k<len)
