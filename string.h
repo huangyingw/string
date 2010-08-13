@@ -48,50 +48,23 @@ String::~String()
 
 void String::StringRev()
 {
-	/*
-	char *nav, *p;
-	char space[]=" ";
-	newStr=new char [GetLength(data)];
-	nav=data;
-	while(*nav!='\0')
-		nav++;
-	while(*nav!=' ')
-		--nav;
-	strcat(newStr, nav);
-	strcat(newStr, space);
-	fout<<"newStr0 string->"<<newStr<<endl<<endl;
-	
-	while(nav>data)
-	{
-		fout<<"nav0->"<<*nav<<endl;
-		while(*nav==' ')
-			--nav;
-
-		fout<<"nav1->"<<*nav<<endl;
-		
-		*++nav='\0';
-		
-		while(*nav!=' ' && nav>data)
-			nav--;
-		
-		fout<<"nav2->"<<*nav<<endl;
-		
-		fout<<"nav string->"<<nav<<endl;
-		fout<<"newStr1 string->"<<newStr<<endl;
-		
-		
-		strcat(newStr, nav);
-		strcat(newStr, space);
-		fout<<"result->"<<newStr<<endl;
-		fout<<endl;
-	}	
-	*/
+	int len = strlen(data);
+  char* restr = new char[len];
+  strcpy(restr,data);
+  int i,j;
+  for(i=0,j=len-1;i<j;i++,j--)
+  {
+    restr[i]^=restr[j];
+    restr[j]^=restr[i];
+    restr[i]^=restr[j];
+  }
+  fout<<restr<<endl;
 }
 
 void String::WordRev()
 {
 	int len = strlen(data);
-  char* restr = new char[len+1];
+  char* restr = new char[len];
   strcpy(restr,data);
   int i,j;
   for(i=0,j=len-1;i<j;i++,j--)
