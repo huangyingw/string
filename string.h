@@ -110,9 +110,9 @@ void String::WordRev()
     j--;
     for(;i<j;i++,j--)
     {
-      char temp=restr[i];
-      restr[i]=restr[j];
-      restr[j]=temp;
+      restr[i]^=restr[j];
+    	restr[j]^=restr[i];
+    	restr[i]^=restr[j];
     }
   }
   fout<<restr<<endl;
