@@ -85,7 +85,6 @@ void String::StringRev()
 		strcat(newStr, space);
 		fout<<"result->"<<newStr<<endl;
 		fout<<endl;
-		
 	}	
 	*/
 }
