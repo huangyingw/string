@@ -59,6 +59,7 @@ void String::StringRev()
     restr[i]^=restr[j];
   }
   fout<<restr<<endl;
+  cout<<restr<<endl;
 }
 
 void String::WordRev()
@@ -89,6 +90,7 @@ void String::WordRev()
     }
   }
   fout<<restr<<endl;
+  cout<<restr<<endl;
 }
 
 char* String::StringCat(const char* str)
