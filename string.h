@@ -7,48 +7,48 @@ using namespace std;
 
 class String
 {
-public:
-	String(const char* str);
-	~String();
-	int GetLength(const char* str);
-	char* StringCat(const char* str);
-	void ShowString();
-	void StringCat(char* str);
-	void WordRev();
-	void WordRevWithStack();
-	void StringRev();
-private:
-	ofstream fout;
-	char *data;
-	char* newStr;
+  public:
+    String(const char* str);
+    ~String();
+    int GetLength(const char* str);
+    char* StringCat(const char* str);
+    void ShowString();
+    void StringCat(char* str);
+    void WordRev();
+    void WordRevWithStack();
+    void StringRev();
+  private:
+    ofstream fout;
+    char *data;
+    char* newStr;
 };
 
 String::String(const char* str)
 {
-	data=new char[GetLength(str)];
-	char *temp=data;
-	while(*temp++=*str++);
-	newStr=NULL;
-	fout.open("output.txt");
+  data=new char[GetLength(str)];
+  char *temp=data;
+  while(*temp++=*str++);
+  newStr=NULL;
+  fout.open("output.txt");
 }
 
 String::~String()
 {
-	if(NULL!=data)
-	{
-		delete[] data;
-	}
-	
-	if(NULL!=newStr)
-	{
-		delete[] newStr;
-	}
-	fout.close();
+  if(NULL!=data)
+  {
+    delete[] data;
+  }
+
+  if(NULL!=newStr)
+  {
+    delete[] newStr;
+  }
+  fout.close();
 }
 
 void String::StringRev()
 {
-	int len = strlen(data);
+  int len = strlen(data);
   char* restr = new char[len];
   strcpy(restr,data);
   int i,j;
@@ -63,7 +63,7 @@ void String::StringRev()
 
 void String::WordRev()
 {
-	int len = strlen(data);
+  int len = strlen(data);
   char* restr = new char[len];
   strcpy(restr,data);
   int i,j;
@@ -78,14 +78,14 @@ void String::WordRev()
   {
     i=j=k;
     while(restr[j]!=' ' && restr[j]!='\0' )
-			j++;
+      j++;
     k=j+1;
     j--;
     for(;i<j;i++,j--)
     {
       restr[i]^=restr[j];
-    	restr[j]^=restr[i];
-    	restr[i]^=restr[j];
+      restr[j]^=restr[i];
+      restr[i]^=restr[j];
     }
   }
   fout<<restr<<endl;
@@ -93,32 +93,33 @@ void String::WordRev()
 
 char* String::StringCat(const char* str)
 {
-	char* target = (char*) realloc (NULL,(GetLength(data)+GetLength(str)) * sizeof(char));
-	char * source=data;
-	char * p=target;
-	while(*source)
-	{
-		*p++=*source++;
-	}
-	while(*str)
-	{
-		*p++=*str++;
-	}
-	*++p='\0';
-	data=target;
+  char* target = (char*) realloc (NULL,(GetLength(data)+GetLength(str)) * sizeof(char));
+  char * source=data;
+  char * p=target;
+  while(*source)
+  {
+    *p++=*source++;
+  }
+  while(*str)
+  {
+    *p++=*str++;
+  }
+  *++p='\0';
+  data=target;
 }
 
 void String::ShowString()
 {
-	fout<<data<<endl;
+  fout<<data<<endl;
+  cout<<data<<endl;
 }
 
 int String::GetLength(const char* str)
 {
-	int len=0;
-	while(*str++!='\0')
-	{
-		len++;
-	}
-	return len;
+  int len=0;
+  while(*str++!='\0')
+  {
+    len++;
+  }
+  return len;
 }
