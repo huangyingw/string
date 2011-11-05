@@ -1,2 +1,3 @@
 make -B \
 && ./string.exe
+
