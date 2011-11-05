@@ -125,3 +125,4 @@ int String::GetLength(const char* str)
   }
   return len;
 }
+
